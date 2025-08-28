@@ -1,0 +1,377 @@
+@charset "UTF-8";
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+.container {
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 960px;
+}
+
+.headline {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2px;
+    padding: 0 6px 0 6px;
+}
+
+.headline h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8B4513; /* Cor alterada para marrom claro */
+    margin: 0;
+}
+
+/* Removido o estilo do .video-centralizado */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Isso define a proporção de 16:9 (altura/largura) */
+    height: 0;
+    overflow: hidden;
+    width: 100%; /* Garante que ocupe 100% do pai */
+    margin: 0 auto 2rem auto; /* Centraliza e adiciona margem inferior */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}   
+
+.secao-principal {
+    margin-top: 20px;
+    padding: 21px 63px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.secao-principal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding: 21px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.secao-principal-header div:first-child {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.secao-principal-header .foto {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 40%;
+}
+
+.secao-principal-header .foto img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container > .secao-principal:first-child {
+    border: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.secao-principal h2 {
+    color: #8B4513; /* Títulos (h2) em marrom claro */
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+.secao-principal h3 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: 1.1em;
+}
+
+.secao-principal p {
+    font-size: 15px;
+    color: #222; /* Texto do parágrafo em preto */
+    margin-bottom: 0; /* Espaçamento ajustado */
+}
+
+.secao-principal p strong {
+    color: #568203; /* Subtítulos (negrito) em verde abacate */
+}
+
+.secao-principal li {
+    font-size: 15px;
+    color: #222; /* Itens da lista em preto */
+    margin-bottom: 0px;
+}
+
+.secao-principal ul {
+    padding-left: 20px;
+    margin-bottom: 0px;
+}
+
+.formulario-aceite {
+    border: 2px solid #007bff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+}
+
+.formulario-aceite h4 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.formulario-aceite label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario-aceite input[type="text"],
+.formulario-aceite input[type="email"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.formulario-aceite .termo-aceite {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #25D366;
+    display: flex;
+    align-items: center;
+}
+
+.formulario-aceite .termo-aceite input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
+}
+
+.formulario-aceite .botao-enviar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-aceite .botao-enviar:hover {
+    background-color: #218838;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    body {
+        margin: 0px auto;
+        padding: 3px 18px 3px 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .headline{
+        padding-bottom: 0;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .secao-principal-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .secao-principal-header div:first-child {
+        flex: 1;
+        margin-right: 0px;
+    }
+
+    .secao-principal-header .foto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .secao-principal-header .foto img {
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+        border: 3px solid #007bff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .secao-principal {
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .secao-principal h2 {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+
+    .secao-principal p,
+    .secao-principal li {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-bottom: 0;
+    }
+
+    .formulario-aceite form {
+        margin-bottom: 8em;
+    }
+
+    .formulario-aceite h4 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .formulario-aceite label {
+        font-size: 1em;
+    }
+
+    .formulario-aceite .botao-enviar {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .headline h1 {
+        font-size: 1rem !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 85%;
+        margin: 15px;
+        padding: 9px;
+        border-radius: 10px;
+    }
+
+    .secao-principal {
+        margin-top: 18px;
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .secao-principal h2 {
+        font-size: 1em;
+        margin-bottom: 0px;
+    }
+
+    .secao-principal p,
+    .secao-principal li {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .formulario-aceite h4 {
+        font-size: 1.6em;
+    }
+
+    .formulario-aceite label {
+        font-size: 1.05em;
+    }
+
+    .formulario-aceite .botao-enviar {
+        font-size: 1.05em;
+    }
+
+    .headline h1 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        border-radius: 12px;
+        margin: 20px auto;
+    }
+
+    .secao-principal {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .secao-principal h2 {
+        font-size: 1.1em;
+        margin-bottom: 0px;
+    }
+
+    .secao-principal p,
+    .secao-principal li {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .formulario-aceite h4 {
+        font-size: 1.6em;
+    }
+
+    .formulario-aceite label {
+        font-size: 1.1em;
+    }
+
+    .formulario-aceite .botao-enviar {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 978px) {
+    body {
+       flex-direction: column;
+    }
+}
